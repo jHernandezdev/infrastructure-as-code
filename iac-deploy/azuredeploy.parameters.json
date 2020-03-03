@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+            "value": ""
+        },
+        "virtualMachiveName": {
+            "value": ""
+        },
+        "userName": {
+            "value": ""
+        },
+        "userPassword": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/dfa02f9b-d8dd-4d7e-b8a0-e665ff78ee6d/resourceGroups/vms-rg/providers/Microsoft.KeyVault/vaults/jhdev-kv"
+                },
+                "secretName": "MyPassword"
+            }
+        }
+    }
+}
