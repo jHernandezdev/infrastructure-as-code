@@ -18,7 +18,7 @@
                             "protocol": "Tcp",
                             "sourcePortRange": "*",
                             "destinationPortRange": "3389",
-                            "sourceAddressPrefix": "88.10.215.92",
+                            "sourceAddressPrefix": "88.10.215.92/32",
                             "destinationAddressPrefix": "*",
                             "access": "Allow",
                             "priority": 100,
