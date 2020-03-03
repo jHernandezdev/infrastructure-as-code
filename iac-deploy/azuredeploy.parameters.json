@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageAccountName": {
-            "value": ""
+            "value": "jhdevstoragevm"
         },
         "virtualMachiveName": {
-            "value": ""
+            "value": "jhdevvm"
         },
         "userName": {
-            "value": ""
+            "value": "sysadmin"
         },
         "userPassword": {
             "reference": {
