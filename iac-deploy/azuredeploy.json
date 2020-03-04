@@ -3,26 +3,26 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageAccountName": {
-           "type": "string",
-           "metadata": {
+            "type": "string",
+            "metadata": {
                 "description": "Enter the name for the Storage Account"
             }
         },
-        "virtualMachiveName":{
+        "virtualMachiveName": {
             "type": "string",
-            "metadata":{
+            "metadata": {
                 "description": "Enter the name for the Virutal Machine"
             }
         },
         "userName": {
-           "type": "string",
-           "metadata": {
+            "type": "string",
+            "metadata": {
                 "description": "Enter the admin user name"
             }
         },
         "userPassword": {
-           "type": "string",
-           "metadata": {
+            "type": "string",
+            "metadata": {
                 "description": "Enter the admin user password"
             }
         }
@@ -37,7 +37,7 @@
         "OSDiskName": "[concat(variables('virtualMachineName'), '-OSDisk')]"
     },
     "resources": [
-        {
+        {   // Storage Account
             "name": "[variables('storageAccount')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2015-06-15",
@@ -49,7 +49,7 @@
                 "accountType": "Standard_LRS"
             }
         },
-        {
+        {   // Public IP Address
             "name": "[variables('PublicIPName')]",
             "type": "Microsoft.Network/publicIPAddresses",
             "apiVersion": "2018-08-01",
@@ -64,7 +64,7 @@
                 }
             }
         },
-        {
+        {   // Virtual Network            
             "name": "[variables('VNetName')]",
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2018-08-01",
@@ -88,7 +88,7 @@
                 ]
             }
         },
-        {
+        {   // Network interface            
             "name": "[variables('NICName')]",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2018-08-01",
@@ -117,7 +117,7 @@
                 ]
             }
         },
-        {
+        {   // Virtual Machine            
             "name": "[variables('virtualMachineName')]",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2017-03-30",
@@ -161,6 +161,8 @@
             }
         }
     ],
-    "outputs": {},
-    "functions": []
+    "outputs": {
+    },
+    "functions": [
+    ]
 }
