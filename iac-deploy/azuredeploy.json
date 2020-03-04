@@ -60,7 +60,7 @@
             "properties": {
                 "publicIPAllocationMethod": "Dynamic",
                 "dnsSettings": {
-                    "domainNameLabel": "[tolower('jhernandezdevvm')]"
+                    "domainNameLabel": "[toLower('jhernandezdevvm')]"
                 }
             }
         },
